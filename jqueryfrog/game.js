@@ -12,12 +12,12 @@ class Car {
         if (this.speed > 0) {
             if (this.top > this.stop) {
                 this.top = this.start;
-                this.speed= Math.floor((Math.random() * 10) + 10);
+                this.speed= Math.floor((Math.random() * 10) + 10+punkte);
             }
         } else {
             if (this.top < this.stop) {
                 this.top = this.start;
-                this.speed= -1*(Math.floor((Math.random() * 10) + 10));
+                this.speed= -1*(Math.floor((Math.random() * 10) + 10+punkte));
             }
         }
         this.jQueryElem.css({top: this.top});
@@ -41,7 +41,7 @@ $(document).ready(function() {
     isGameOver = false;
     var isCenter = false;
     var position = "left";
-    var punkte = 0;
+    punkte = 0;
     checkCollision();
     $(".center").mouseover(function(){
         isCenter = true;
@@ -53,7 +53,7 @@ $(document).ready(function() {
             punkte++;
             isCenter = false;
             $(".point").html("Punkte:"+punkte);
-        }
+       }
       });
     
       $(".right").mouseover(function(){
