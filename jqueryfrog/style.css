@@ -1,0 +1,51 @@
+html, body {
+    
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 150px auto 150px;
+    cursor: url("images/frog.gif"), pointer;
+    overflow: hidden;
+}
+
+#street {
+    background-image: url("images/street.jpg");
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    justify-items: center;
+}
+
+.side {
+    background-image: url("images/terrain.jpg");
+}
+
+.car {
+    position: relative;
+    height: 20vh;
+}
+
+.drive-down {
+    top: -20vh;
+}
+
+.drive-up {
+    top: 100vh;
+}
+.point{
+    background-color: white;
+    
+}
+.gameover{
+    top:100%;
+    width: 100%;
+    height: 100%;
+    background-color: #aa0000;
+    position: absolute;
+    font-size: 5em;
+    color: #ffffff;
+    text-align: center;
+  }
